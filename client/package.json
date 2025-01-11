@@ -1,0 +1,40 @@
+{
+  "name": "client",
+  "version": "1.0.0",
+  "main": "node_modules/expo/AppEntry.js",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web"
+  },
+  "dependencies": {
+    "@expo-google-fonts/kanit": "^0.2.3",
+    "@react-native-async-storage/async-storage": "^1.21.0",
+    "@react-navigation/native": "^6.1.15",
+    "@react-navigation/native-stack": "^6.9.24",
+    "@react-navigation/stack": "^6.3.26",
+    "axios": "^1.6.7",
+    "expo": "~50.0.11",
+    "expo-font": "~11.10.3",
+    "expo-linear-gradient": "~12.7.2",
+    "expo-status-bar": "~1.11.1",
+    "moment": "^2.30.1",
+    "react": "^18.2.0",
+    "react-native": "0.73.4",
+    "react-native-elements": "^3.4.3",
+    "react-native-gesture-handler": "^2.14.0",
+    "react-native-keyboard-aware-scroll-view": "^0.9.5",
+    "react-native-linear-gradient": "^2.8.3",
+    "react-native-localization": "^2.3.2",
+    "react-native-localize": "^3.0.6",
+    "react-native-vector-icons": "^10.0.3",
+    "socket.io": "^4.7.5",
+    "socket.io-client": "^4.7.5",
+    "socket.io-parser": "^4.2.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.0"
+  },
+  "private": true
+}
