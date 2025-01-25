@@ -6,11 +6,14 @@
     "start": "expo start",
     "android": "expo run:android",
     "ios": "expo run:ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "prebuild": "expo prebuild"
   },
   "dependencies": {
     "@expo-google-fonts/kanit": "^0.2.3",
     "@react-native-async-storage/async-storage": "^1.21.0",
+    "@react-native-firebase/app": "^21.7.1",
+    "@react-native-firebase/messaging": "^21.7.1",
     "@react-navigation/native": "^6.1.15",
     "@react-navigation/native-stack": "^6.9.24",
     "@react-navigation/stack": "^6.3.26",

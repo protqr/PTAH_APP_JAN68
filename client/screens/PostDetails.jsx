@@ -3,6 +3,7 @@ import { View, Text, StyleSheet, TextInput, TouchableOpacity, ScrollView, Keyboa
 import moment from 'moment';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { SERVER_BASE_URL } from '../constant';
 
 const PostDetails = ({ route }) => {
   const { post } = route.params;
@@ -47,8 +48,8 @@ const PostDetails = ({ route }) => {
       }
 
       const url = replyingTo
-        ? `http://192.168.1.47:8080/api/v1/post/${post._id}/add-reply/${replyingTo}`
-        : `http://192.168.1.47:8080/api/v1/post/add-comment/${post._id}`;
+        ? `${SERVER_BASE_URL}/api/v1/post/${post._id}/add-reply/${replyingTo}`
+        : `${SERVER_BASE_URL}/api/v1/post/add-comment/${post._id}`;
 
       console.log('URL:', url);
       console.log('Body:', { text: commentText });

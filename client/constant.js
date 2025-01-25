@@ -1,0 +1,6 @@
+export const FIREBASE_TOPIC = {
+  ALL: "ALL",
+  UNDER_TREATMENT: "UNDER_TREATMENT",
+};
+
+export const SERVER_BASE_URL = "http://192.168.1.47:8080"
