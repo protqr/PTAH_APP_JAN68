@@ -47,8 +47,8 @@ const PostDetails = ({ route }) => {
       }
 
       const url = replyingTo
-        ? `http://10.0.2.2:8080/api/v1/post/${post._id}/add-reply/${replyingTo}`
-        : `http://10.0.2.2:8080/api/v1/post/add-comment/${post._id}`;
+        ? `http://192.168.1.47:8080/api/v1/post/${post._id}/add-reply/${replyingTo}`
+        : `http://192.168.1.47:8080/api/v1/post/add-comment/${post._id}`;
 
       console.log('URL:', url);
       console.log('Body:', { text: commentText });

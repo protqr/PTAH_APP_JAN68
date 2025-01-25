@@ -29,7 +29,7 @@ const AuthContext = createContext();
 
   //axios.defaults.baseURL = 'http://192.168.8.147:8080/api/v1';
 
-  axios.defaults.baseURL = 'http://10.0.2.2:8080/api/v1';
+  axios.defaults.baseURL = 'http://192.168.1.47:8080/api/v1';
   return (
     <AuthContext.Provider value={[state, setState]}>
       {children}
