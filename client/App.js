@@ -1,21 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import { initializeApp } from '@react-native-firebase/app';
 import RootNavigation from './navigation';
 import { useFonts } from 'expo-font';
-import FirebaseNotification from './components/notifications/FirebaseNotification';
-
-const firebaseConfig = {
-  apiKey: "AIzaSyBqff8uZJOupcVUSQxh84ea4DVfzrfPxVI",
-  authDomain: "john-personal-c4cbf.firebaseapp.com",
-  projectId: "john-personal-c4cbf",
-  storageBucket: "john-personal-c4cbf.firebasestorage.app",
-  messagingSenderId: "276068174406",
-  appId: "1:276068174406:web:3d5c3076db9350b7861847",
-  databaseURL: ""
-};
-
-initializeApp(firebaseConfig);
+import { usePushNotification } from './hook/usePushNotification';
 
 export default function App () {
   let [fontsLoaded] = useFonts({
@@ -24,11 +11,19 @@ export default function App () {
     // สามารถเพิ่มฟอนต์อื่น ๆ ตามต้องการได้ที่นี่
   });
 
+  const { subscribe } = usePushNotification();
+
+  useEffect(() => {
+    const unsubscribe = subscribe();
+
+    return () => {
+      if (unsubscribe) unsubscribe();
+    };
+  }, []);
 
   return (
     <NavigationContainer>
       <RootNavigation />
-      <FirebaseNotification />
     </NavigationContainer>
   );
 }
